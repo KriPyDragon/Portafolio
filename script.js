@@ -2,6 +2,12 @@
    PORTAFOLIO - SCRIPT MEJORADO
    ============================================ */
 
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
+
+window.scrollTo(0, 0);
+
 // ============================================
 // TYPING EFFECT
 // ============================================
@@ -437,6 +443,8 @@ function setCurrentYear() {
 // INICIALIZACIÓN
 // ============================================
 document.addEventListener('DOMContentLoaded', () => {
+    window.scrollTo(0, 0);
+
     // Iniciar typing effect
     setTimeout(typeEffect, 1000);
 
