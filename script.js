@@ -57,8 +57,7 @@ function adjustScrollOffset() {
     navbar.classList.add('scrolled');        // medir contraido
     const h = navbar.offsetHeight;
     navbar.classList.remove('scrolled');
-    document.documentElement.style.scrollPaddingTop = h + 'px';
-    document.documentElement.style.setProperty('--nav-h', h + 'px'); // para el min-height de .section
+    document.documentElement.style.setProperty('--nav-h', h + 'px');
 }
 
 // ============================================
@@ -445,7 +444,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', handleNavbarScroll);
     handleNavbarScroll();
 
-    // Offset exacto de scroll segun navbar
+    // Altura del navbar para las secciones
     adjustScrollOffset();
     window.addEventListener('resize', adjustScrollOffset);
 

@@ -57,7 +57,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 53px;   /* base; JS lo sobrescribe con la medida exacta */
+    scroll-padding-top: 0;
 }
 
 body {
