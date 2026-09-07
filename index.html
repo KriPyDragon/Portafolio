@@ -3,85 +3,331 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio</title>
+    <meta name="description" content="Portafolio de Nick Paul Sandoval Pérez - Ingeniero de Sistemas especializado en desarrollo de software, optimización de procesos y tecnologías innovadoras.">
+    <meta name="keywords" content="Nick Sandoval, Ingeniero de Sistemas, Desarrollador Full Stack, Python, JavaScript, React, Java, SQL, Perú">
+    <meta name="author" content="Nick Paul Sandoval Pérez">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Nick Sandoval | Ingeniero de Sistemas & Desarrollador">
+    <meta property="og:description" content="Portafolio profesional de Nick Sandoval - Desarrollo de software y optimización de procesos.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kripydragon.github.io/Portafolio/">
+    <meta property="og:locale" content="es_PE">
+
+    <title>Nick Sandoval | Ingeniero de Sistemas & Desarrollador</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Devicon -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Bienvenido a Mi Portafolio</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">Sobre mí</a></li>
-                    <li><a href="#skills">Habilidades</a></li>
-                    <li><a href="#projects">Proyectos</a></li>
-                    <li><a href="#contact">Contacto</a></li>
+    <!-- Botón volver arriba -->
+    <button id="back-to-top" class="back-to-top" aria-label="Volver arriba" title="Volver arriba">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+    </button>
+
+    <!-- Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-bracket">&lt;</span>Nick<span class="logo-accent">Dev</span><span class="logo-bracket">/&gt;</span>
+            </a>
+
+            <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú de navegación">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#about" class="nav-link active">Sobre mí</a></li>
+                    <li><a href="#skills" class="nav-link">Habilidades</a></li>
+                    <li><a href="#projects" class="nav-link">Proyectos</a></li>
+                    <li><a href="#contact" class="nav-link">Contacto</a></li>
                 </ul>
+                <a href="assets/Imagenes/Nick CV.pdf" class="btn btn-primary btn-sm" target="_blank" download>Descargar CV</a>
             </nav>
         </div>
     </header>
 
-    <!-- Sección "Sobre mí" -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2>Sobre mí</h2>
-            <div class="about-content">
-                <div class="about-photo">
-                    <img src="assets/Imagenes/Nick Foto.png" alt="Foto de Perfil">
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-bg">
+                <div class="hero-shape shape-1"></div>
+                <div class="hero-shape shape-2"></div>
+                <div class="hero-shape shape-3"></div>
+            </div>
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <p class="hero-greeting">👋 ¡Hola! Soy</p>
+                    <h1 class="hero-title">Nick Paul Sandoval Pérez</h1>
+                    <div class="hero-typing">
+                        <span id="typing-text"></span><span class="typing-cursor">|</span>
+                    </div>
+                    <p class="hero-description">
+                        Ingeniero de Sistemas apasionado por crear soluciones tecnológicas 
+                        que optimizan procesos y generan impacto real. Especializado en 
+                        <strong>desarrollo de software</strong>, <strong>arquitectura de sistemas</strong> 
+                        y <strong>tecnologías innovadoras</strong>.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">Ver Proyectos</a>
+                        <a href="#contact" class="btn btn-outline">Contactar</a>
+                    </div>
+                    <div class="hero-socials">
+                        <a href="https://github.com/KriPyDragon" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <i class="devicon-github-original"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/nick-paul-sandoval-p%C3%A9rez-bb5642255/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="devicon-linkedin-plain"></i>
+                        </a>
+                        <a href="mailto:21131b0673@unapiquitos.edu.pe" aria-label="Email">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                        </a>
+                    </div>
                 </div>
-                <div class="about-description">
-                    <p>Ingeniero de sistemas enfocado en desarrollo de software, optimización de procesos y tecnologías innovadoras.</p>
-                    <button id="download-cv">Descargar CV</button>
+                <div class="hero-photo">
+                    <div class="photo-wrapper">
+                        <img src="assets/Imagenes/Nick Foto.png" alt="Foto de Nick Paul Sandoval Pérez - Ingeniero de Sistemas">
+                        <div class="photo-ring"></div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Sección "Habilidades" -->
-    <section id="skills" class="section">
-        <div class="container">
-            <h2>Habilidades y Tecnologías</h2>
-            <div id="skills-list" class="skills-grid">
-                <!-- Las habilidades se cargarán dinámicamente aquí -->
+            <div class="hero-scroll">
+                <a href="#about" aria-label="Desplazar hacia abajo">
+                    <div class="mouse">
+                        <div class="wheel"></div>
+                    </div>
+                    <span>Desplazar</span>
+                </a>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Sección "Proyectos" -->
-    <section id="projects" class="section">
-        <div class="container">
-            <h2>Proyectos</h2>
-            <div id="projects-list" class="projects-list">
-                <!-- Los proyectos se cargarán aquí dinámicamente -->
+        <!-- Sobre mí -->
+        <section id="about" class="section about-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">01. Sobre mí</span>
+                    <h2 class="section-title">Conóceme un poco más</h2>
+                    <p class="section-subtitle">Mi trayectoria y lo que me motiva</p>
+                </div>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>
+                            Soy <strong>Ingeniero de Sistemas</strong> con una fuerte orientación hacia el 
+                            desarrollo de software y la optimización de procesos empresariales. Mi objetivo 
+                            es construir soluciones tecnológicas que no solo funcionen, sino que realmente 
+                            <span class="highlight">mejoren la vida de las personas</span>.
+                        </p>
+                        <p>
+                            A lo largo de mi formación he trabajado con diversas tecnologías, desde 
+                            lenguajes de programación como <strong>Python</strong>, <strong>Java</strong> y 
+                            <strong>JavaScript</strong>, hasta el diseño y gestión de <strong>bases de datos SQL</strong>. 
+                            Me apasiona aprender constantemente y enfrentar nuevos desafíos técnicos.
+                        </p>
+                        <p>
+                            Actualmente busco oportunidades donde pueda aplicar mis conocimientos, 
+                            colaborar en equipos multidisciplinarios y seguir creciendo como profesional 
+                            en el mundo de la tecnología.
+                        </p>
+                        <div class="about-stats">
+                            <div class="stat">
+                                <span class="stat-number">5+</span>
+                                <span class="stat-label">Tecnologías</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">10+</span>
+                                <span class="stat-label">Proyectos</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">Compromiso</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-photo-secondary">
+                        <img src="assets/Imagenes/Nick Foto.png" alt="Nick trabajando en proyectos de desarrollo">
+                        <div class="experience-badge">
+                            <span class="exp-years">+1</span>
+                            <span class="exp-text">años de<br>experiencia</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Sección "Contacto" -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Contacto</h2>
-            <div class="contact-row">
-                <div class="contact-item">
-                    <img src="assets/Iconos/gmail icono.png" alt="Gmail Icono">
-                    <p><a href="mailto:21131b0673@unapiquitos.edu.pe">Email</a></p>
+        <!-- Habilidades -->
+        <section id="skills" class="section skills-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">02. Habilidades</span>
+                    <h2 class="section-title">Tecnologías que domino</h2>
+                    <p class="section-subtitle">Mi stack tecnológico y nivel de competencia</p>
                 </div>
-                <div class="contact-item">
-                    <img src="assets/Iconos/Github icono.png" alt="Github Icono">
-                    <p><a href="https://github.com/KriPyDragon" target="_blank">GitHub</a></p>
-                </div>
-                <div class="contact-item">
-                    <img src="assets/Iconos/linkedin icono.png" alt="LinkedIn Icono">
-                    <p><a href="https://www.linkedin.com/in/nick-paul-sandoval-pérez-bb5642255
-                        " target="_blank">LinkedIn</a></p>
+                <div class="skills-grid" id="skills-grid">
+                    <!-- Skills se cargan dinámicamente -->
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer>
+        <!-- Proyectos -->
+        <section id="projects" class="section projects-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">03. Proyectos</span>
+                    <h2 class="section-title">Mis trabajos destacados</h2>
+                    <p class="section-subtitle">Proyectos personales y académicos que demuestran mis habilidades</p>
+                </div>
+                <div class="projects-grid" id="projects-grid">
+                    <div class="loading-state">
+                        <div class="spinner"></div>
+                        <p>Cargando proyectos desde GitHub...</p>
+                    </div>
+                </div>
+                <div class="projects-cta">
+                    <a href="https://github.com/KriPyDragon?tab=repositories" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                        Ver todos en GitHub
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">04. Contacto</span>
+                    <h2 class="section-title">¿Hablamos?</h2>
+                    <p class="section-subtitle">Estoy abierto a oportunidades, colaboraciones o simplemente charlar sobre tecnología</p>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Información de contacto</h3>
+                        <p>Si tienes una propuesta, proyecto o simplemente quieres conectar, no dudes en escribirme. Respondo lo antes posible.</p>
+
+                        <div class="contact-cards">
+                            <a href="mailto:21131b0673@unapiquitos.edu.pe" class="contact-card">
+                                <div class="contact-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                </div>
+                                <div class="contact-detail">
+                                    <span class="contact-label">Email</span>
+                                    <span class="contact-value">21131b0673@unapiquitos.edu.pe</span>
+                                </div>
+                            </a>
+
+                            <a href="https://github.com/KriPyDragon" target="_blank" rel="noopener noreferrer" class="contact-card">
+                                <div class="contact-icon">
+                                    <i class="devicon-github-original"></i>
+                                </div>
+                                <div class="contact-detail">
+                                    <span class="contact-label">GitHub</span>
+                                    <span class="contact-value">@KriPyDragon</span>
+                                </div>
+                            </a>
+
+                            <a href="https://www.linkedin.com/in/nick-paul-sandoval-p%C3%A9rez-bb5642255/" target="_blank" rel="noopener noreferrer" class="contact-card">
+                                <div class="contact-icon">
+                                    <i class="devicon-linkedin-plain"></i>
+                                </div>
+                                <div class="contact-detail">
+                                    <span class="contact-label">LinkedIn</span>
+                                    <span class="contact-value">Nick Paul Sandoval</span>
+                                </div>
+                            </a>
+
+                            <div class="contact-card">
+                                <div class="contact-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                                </div>
+                                <div class="contact-detail">
+                                    <span class="contact-label">Ubicación</span>
+                                    <span class="contact-value">Iquitos, Perú</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-wrapper">
+                        <form id="contact-form" class="contact-form" action="https://formspree.io/f/xnqevwqb" method="POST">
+                            <div class="form-group">
+                                <label for="name">Nombre completo</label>
+                                <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Correo electrónico</label>
+                                <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Asunto</label>
+                                <input type="text" id="subject" name="subject" placeholder="¿De qué se trata?" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Mensaje</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">
+                                <span class="btn-text">Enviar mensaje</span>
+                                <span class="btn-loader" style="display:none;">
+                                    <div class="spinner spinner-sm"></div>
+                                </span>
+                            </button>
+                            <p class="form-note">⚡ También puedes escribirme directamente por email o LinkedIn</p>
+                        </form>
+                        <div id="form-success" class="form-success" style="display:none;">
+                            <div class="success-icon">✅</div>
+                            <h4>¡Mensaje enviado!</h4>
+                            <p>Gracias por contactarme. Te responderé lo antes posible.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
         <div class="container">
-            <p>© 2025 Mi Portafolio. Todos los derechos reservados.</p>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-bracket">&lt;</span>Nick<span class="logo-accent">Dev</span><span class="logo-bracket">/&gt;</span>
+                    <p>Ingeniero de Sistemas & Desarrollador de Software</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#about">Sobre mí</a>
+                    <a href="#skills">Habilidades</a>
+                    <a href="#projects">Proyectos</a>
+                    <a href="#contact">Contacto</a>
+                </div>
+                <div class="footer-socials">
+                    <a href="https://github.com/KriPyDragon" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="devicon-github-original"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/nick-paul-sandoval-p%C3%A9rez-bb5642255/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="devicon-linkedin-plain"></i>
+                    </a>
+                    <a href="mailto:21131b0673@unapiquitos.edu.pe" aria-label="Email">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© <span id="year"></span> Nick Sandoval. Todos los derechos reservados.</p>
+                <p class="footer-made">Hecho en Iquitos, Perú</p>
+            </div>
         </div>
     </footer>
 
