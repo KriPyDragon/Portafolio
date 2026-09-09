@@ -536,10 +536,11 @@ button {
     to { transform: rotate(360deg); }
 }
 
+
 /* Scroll indicator */
 .hero-scroll {
     position: absolute;
-    bottom: 2rem;
+    bottom: 1.5rem;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
@@ -551,22 +552,40 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.35rem;
     color: var(--text-muted);
-    font-size: 0.8rem;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0.7;
+    transition: var(--transition-fast);
+}
+
+.hero-scroll a:hover {
+    opacity: 1;
+    color: var(--accent);
+}
+
+.hero-scroll a:hover .mouse {
+    border-color: var(--accent);
+}
+
+.hero-scroll a:hover .wheel {
+    background: var(--accent);
 }
 
 .mouse {
-    width: 24px;
-    height: 38px;
+    width: 22px;
+    height: 34px;
     border: 2px solid var(--text-muted);
     border-radius: var(--radius-full);
     position: relative;
+    transition: var(--transition-fast);
 }
 
 .wheel {
-    width: 4px;
-    height: 8px;
+    width: 3px;
+    height: 7px;
     background: var(--text-muted);
     border-radius: var(--radius-full);
     position: absolute;
@@ -578,7 +597,7 @@ button {
 
 @keyframes scrollWheel {
     0% { top: 6px; opacity: 1; }
-    100% { top: 18px; opacity: 0; }
+    100% { top: 16px; opacity: 0; }
 }
 
 @keyframes fadeInUp {
@@ -591,7 +610,6 @@ button {
         transform: translateY(0);
     }
 }
-
 /* ============================================
    SECCIONES GENERALES
    ============================================ */
@@ -1402,6 +1420,9 @@ button {
     .footer-bottom {
         flex-direction: column;
         text-align: center;
+    }
+.hero-scroll {
+        display: none;
     }
 }
 
